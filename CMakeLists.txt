@@ -66,6 +66,7 @@ if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_SOURCE_DIR}")
     set (URHO3D_TOOLS OFF CACHE BOOL "" FORCE)
     set (URHO3D_PLAYER OFF CACHE BOOL "" FORCE)
     add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/rbfx-master)
-    target_link_libraries(rbfx-tasks PUBLIC Urho3D)
     add_subdirectory(Samples/01_Tasks)
 endif ()
+
+target_link_libraries(rbfx-tasks PUBLIC Urho3D)
